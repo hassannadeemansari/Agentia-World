@@ -25,8 +25,7 @@
 //         </div>
 //     )
 // }
-
-"use client";
+ 
 
 import { Bot, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
@@ -56,7 +55,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex w-[30%] justify-evenly items-center text-lg">
+      <div className="hidden md:flex w-[40%] justify-evenly items-center text-lg">
         <Link href="/" className="hover:text-purple-400 transition duration-300">Features</Link>
         <Link href="/" className="hover:text-purple-400 transition duration-300">Technology</Link>
         <Link href="/" className="hover:text-purple-400 transition duration-300">Agents</Link>
@@ -76,7 +75,7 @@ export default function Navbar() {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="absolute top-20 right-0 w-full bg-black text-white flex flex-col items-center py-6 shadow-2xl rounded-lg md:hidden"
+          className="absolute top-20 left-0 w-full bg-black text-white flex flex-col items-center py-6 shadow-2xl md:hidden z-50"
         >
           {[
             { name: "Features", path: "/" },
@@ -90,6 +89,7 @@ export default function Navbar() {
               href={item.path}
               variants={itemVariants}
               className="py-3 text-lg font-semibold tracking-widest uppercase transform transition-all duration-300 hover:scale-110 hover:text-purple-400"
+              onClick={() => setIsOpen(false)} // Close menu when clicking a link
             >
               {item.name}
             </motion.a>
