@@ -69,7 +69,7 @@ export default function Home(){
 
           {/*Powered by Advanced AI*/}
 
-          <div className="2xl:w-[1600px] sm:h-[445vh] h-[700vh] bg-black flex flex-col items-center gap-32">          <div className="w-[77%] flex flex-col gap-12 mt-12">
+          <div id="technology" className="2xl:w-[1600px] sm:h-[445vh] h-[700vh] bg-black flex flex-col items-center gap-32">          <div className="w-[77%] flex flex-col gap-12 mt-12">
                     <div className="flex flex-col items-center font-sans gap-4">
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-600 bg-clip-text text-transparent">Powered by Advanced AI</h1>
                         <p className="text-gray-500 text-[21px] font-sans ">Built on cutting-edge neural architectures</p>
@@ -113,7 +113,7 @@ export default function Home(){
 
 
 
-            <div className="w-[77%]  flex flex-col gap-12">
+            <div id="features" className="w-[77%]  flex flex-col gap-12">
                     <div className="flex flex-col items-center font-sans gap-4">
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-600 bg-clip-text text-transparent">Neural Capabilities</h1>
                         <p className="text-gray-500 text-[21px] font-sans ">Powered by next-generation artificial intelligence</p>
@@ -155,7 +155,7 @@ export default function Home(){
             {/*Ai Solution*/}
 
 
-            <div className="sm:w-[77%] w-[95%]  flex flex-col gap-12">
+            <div id="agents" className="sm:w-[77%] w-[95%]  flex flex-col gap-12">
                     <div className="flex flex-col items-center font-sans gap-4">
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-600 bg-clip-text text-transparent">AI Solutions</h1>
                         <p className="text-gray-500 text-[21px] font-sans ">Transforming industries with intelligent agents</p>
@@ -192,7 +192,7 @@ export default function Home(){
             {/*Choose your plan*/}
 
 
-            <div className="w-[77%] md:h-[700px] flex flex-col gap-12">
+            <div id="pricing" className="w-[77%] md:h-[700px] flex flex-col gap-12">
                     <div className="flex flex-col items-center font-sans gap-4">
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-600 bg-clip-text text-transparent">Choose Your Plan</h1>
                         <p className="text-gray-500 text-[21px] font-sans ">Scale your AI capabilities with our flexible pricing</p>
@@ -267,7 +267,7 @@ export default function Home(){
            {/*Contact Information*/}
 
 
-           <div className="w-[76%] flex flex-col gap-12 ">
+           <div id="contact" className="w-[76%] flex flex-col gap-12 bg-black ">
                     <div className="flex flex-col items-center font-sans gap-4">
                         <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-600 bg-clip-text text-transparent">Get in Touch</h1>
                         <p className="text-gray-500 text-[21px] font-sans ">Ready to transform your business with AI?</p>
