@@ -1,6 +1,6 @@
 'use client'
 
-import Navbar from "@/Components/Navbar";
+// import Navbar from "@/Components/Navbar";
 import { Bot, Menu } from "lucide-react";
 import { Brain } from "lucide-react";
 import TypingBox from "@/Components/TypingBox";
