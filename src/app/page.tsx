@@ -1,5 +1,7 @@
+'use client'
+
 import Navbar from "@/Components/Navbar";
-import { Bot } from "lucide-react";
+import { Bot, Menu } from "lucide-react";
 import { Brain } from "lucide-react";
 import TypingBox from "@/Components/TypingBox";
 import { Cpu } from "lucide-react";
@@ -14,12 +16,130 @@ import { Mail } from "lucide-react";
 import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Twitter } from "lucide-react"; 
-
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Home(){
+
+
+
+
+
+
+
+
+
+  
+  const navVariants = {
+    hidden: { opacity: 0, x: "100%", filter: "blur(20px)" },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      filter: "blur(0px)", 
+      transition: { duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 } 
+    },
+    exit: { opacity: 0, x: "100%", transition: { duration: 0.5, ease: "easeIn" } },
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.5, 
+        ease: "easeOut", 
+        delay: 0.2 
+      } 
+    },
+  }
+
+
+
+
+  const [isOpen, setIsOpen] = useState(false);
+
+
+
+
+
+
+
+
+
+
+
+
   return (
       <div>
-          <Navbar />
+          {/* <Navbar /> */}
+
+
+
+
+
+ {/* navbar */}
+
+ <div className="relative 2xl:w-[1600px] h-20 bg-black z-50 text-white flex justify-between items-center px-6 shadow-black shadow-xl sticky top-0">
+     
+     <div className="w-auto h-full flex items-center uppercase font-extrabold text-2xl">
+         Hassan
+      </div>
+
+
+<div className="hidden md:flex w-[30%] h-full text-white justify-evenly items-center font-sans text-lg">
+ <a href="#About">About</a>
+ <a href="#skills">Skills</a>
+ <a href="#work">Work</a>
+ <a href="#contact">Contact</a>
+</div>
+
+
+    <div className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+       <Menu size={30} />
+    </div>
+
+{/* Mobile  */}
+{isOpen && (
+ <motion.div
+ variants={navVariants}
+ initial="hidden"
+ animate="visible"
+ exit="exit"
+ className="absolute top-20 right-0 w-full bg-purple-600 text-white flex flex-col items-center py-6 shadow-2xl rounded-lg md:hidden"
+>
+ {[
+   { name: "About", path: "#about" },
+   { name: "Skills", path: "#skills" },
+   { name: "Work", path: "#work" },
+   { name: "Contact", path: "#contact" }
+ ].map((item, index) => (
+   <motion.a
+     key={index}
+     href={item.path}
+     variants={itemVariants}
+     className="py-3 text-lg font-semibold tracking-widest text-shadow-lg uppercase transform transition-all duration-300 hover:scale-110 hover:text-blue-800"
+   >
+     {item.name}
+   </motion.a>
+ ))}
+</motion.div>
+
+)}
+</div> 
+
+
+
+
+          
+
+
+
+
+
+
+
+
 
           {/**Hero */}
 
