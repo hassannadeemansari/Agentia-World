@@ -1,7 +1,7 @@
 'use client'
 
 // import Navbar from "@/Components/Navbar";
-import { Bot, Menu } from "lucide-react";
+import { Bot, Menu ,X  } from "lucide-react";
 import { Brain } from "lucide-react";
 import TypingBox from "@/Components/TypingBox";
 import { Cpu } from "lucide-react";
@@ -19,54 +19,34 @@ import { Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+
+
+
+const navVariants = {
+  hidden: { opacity: 0, x: "100%", filter: "blur(20px)" },
+  visible: {
+    opacity: 1,
+    x: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 },
+  },
+  exit: { opacity: 0, x: "100%", transition: { duration: 0.5, ease: "easeIn" } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
+  },
+};
+
 export default function Home(){
 
 
-
-
-
-
-
-
-
   
-  const navVariants = {
-    hidden: { opacity: 0, x: "100%", filter: "blur(20px)" },
-    visible: { 
-      opacity: 1, 
-      x: 0, 
-      filter: "blur(0px)", 
-      transition: { duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 } 
-    },
-    exit: { opacity: 0, x: "100%", transition: { duration: 0.5, ease: "easeIn" } },
-  };
-  
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        duration: 0.5, 
-        ease: "easeOut", 
-        delay: 0.2 
-      } 
-    },
-  }
-
-
-
-
   const [isOpen, setIsOpen] = useState(false);
-
-
-
-
-
-
-
-
-
 
 
 
@@ -80,55 +60,52 @@ export default function Home(){
 
  {/* navbar */}
 
- <div className="relative 2xl:w-[1600px] h-20 bg-black z-50 text-white flex justify-between items-center px-6 shadow-black shadow-xl sticky top-0">
-     
-     <div className="w-auto h-full flex items-center uppercase font-extrabold text-2xl">
-         Hassan
+ <nav className="fixed top-0 left-0 w-full bg-black z-50 shadow-lg shadow-[#1f113f] text-gray-400 flex justify-between items-center px-4 md:px-6 h-16 md:h-20">
+      <div className="flex items-center gap-2">
+        <span className="text-2xl text-white font-bold">Agentia World</span>
       </div>
 
+      {/* Desktop Navbar */}
+      <div className="hidden md:flex flex-wrap w-[60%] lg:w-[50%] justify-evenly items-center font-sans text-lg">
+        {["Features", "Technology", "Agents", "Pricing", "Contact"].map((item, index) => (
+          <a key={index} href={`#${item.toLowerCase()}`} className="hover:text-white transition-all">
+            {item}
+          </a>
+        ))}
+        <a href="#pricing">
+          <button className="w-32 md:w-40 h-10 text-white rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90">
+            Launch Console
+          </button>
+        </a>
+      </div>
 
-<div className="hidden md:flex w-[30%] h-full text-white justify-evenly items-center font-sans text-lg">
- <a href="#About">About</a>
- <a href="#skills">Skills</a>
- <a href="#work">Work</a>
- <a href="#contact">Contact</a>
-</div>
+      {/* Mobile Menu Button */}
+      <div className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <X size={30} /> : <Menu size={30} />}
+      </div>
 
-
-    <div className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-       <Menu size={30} />
-    </div>
-
-{/* Mobile  */}
-{isOpen && (
- <motion.div
- variants={navVariants}
- initial="hidden"
- animate="visible"
- exit="exit"
- className="absolute top-20 right-0 w-full bg-purple-600 text-white flex flex-col items-center py-6 shadow-2xl rounded-lg md:hidden"
->
- {[
-   { name: "About", path: "#about" },
-   { name: "Skills", path: "#skills" },
-   { name: "Work", path: "#work" },
-   { name: "Contact", path: "#contact" }
- ].map((item, index) => (
-   <motion.a
-     key={index}
-     href={item.path}
-     variants={itemVariants}
-     className="py-3 text-lg font-semibold tracking-widest text-shadow-lg uppercase transform transition-all duration-300 hover:scale-110 hover:text-blue-800"
-   >
-     {item.name}
-   </motion.a>
- ))}
-</motion.div>
-
-)}
-</div> 
-
-
+      {/* Mobile Navbar */}
+      {isOpen && (
+        <motion.div
+          variants={navVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="absolute top-20 right-0 w-full bg-purple-600 text-white flex flex-col items-center py-6 shadow-2xl rounded-lg md:hidden"
+        >
+          {["About", "Skills", "Work", "Contact"].map((item, index) => (
+            <motion.a
+              key={index}
+              href={`#${item.toLowerCase()}`}
+              variants={itemVariants}
+              className="py-3 text-lg font-semibold tracking-widest text-shadow-lg uppercase transform transition-all duration-300 hover:scale-110 hover:text-blue-800"
+            >
+              {item}
+            </motion.a>
+          ))}
+        </motion.div>
+      )}
+    </nav>
 
 
           

@@ -227,9 +227,8 @@ export default function Navbar() {
           ))}
           
           <button  className="w-40 h-10 text-white rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90">
-            <a href="#pricing">
             Launch Console
-            </a>
+          
           </button>
         </div>
 
