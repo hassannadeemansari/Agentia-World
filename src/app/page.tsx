@@ -91,9 +91,9 @@ export default function Home(){
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="absolute top-20 right-0 w-full bg-purple-600 text-white flex flex-col items-center py-6 shadow-2xl rounded-lg md:hidden"
+          className="absolute top-20 right-0 w-full bg-gradient-to-t from-black to-purple-600 text-white flex flex-col items-center py-6 shadow-2xl rounded-lg md:hidden"
         >
-          {["About", "Skills", "Work", "Contact"].map((item, index) => (
+          {["Features", "Technology", "Agents", "pricing", "Contact"].map((item, index) => (
             <motion.a
               key={index}
               href={`#${item.toLowerCase()}`}
@@ -101,8 +101,14 @@ export default function Home(){
               className="py-3 text-lg font-semibold tracking-widest text-shadow-lg uppercase transform transition-all duration-300 hover:scale-110 hover:text-blue-800"
             >
               {item}
+              
             </motion.a>
           ))}
+          <a href="#pricing">
+          <button className="w-40 md:w-40 h-10 text-white rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90">
+            Launch Console
+          </button>
+        </a>
         </motion.div>
       )}
     </nav>
@@ -488,7 +494,7 @@ export default function Home(){
     {/* Copyright Section */}
     <hr className="w-[90%] h-[1px] bg-[#29163f] opacity-50" />
     <p className="text-gray-400 text-sm py-6">
-        © 2025 Agentia World. Powered by Panaversity. All rights reserved.
+        © 2025 Agentia World. Hassan Nadeem. All rights reserved.
     </p>
 </footer>
 
