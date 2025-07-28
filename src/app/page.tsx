@@ -343,7 +343,7 @@ export default function Home(){
                                </button>
                          </div>
 
-                         <div className="sm:w-[100%] h-auto pt-3 pb-3 md:h-[600px] xl:h-[535px] pr-4 bg-[#0D0D0D] rounded-lg flex flex-col text-center  gap-2 border border-[#1b0b2b] transition-transform hover:scale-105 duration-500">
+                         <div className="sm:w-[100%] sm:h-[535px] h-auto pt-3 pb-5 sm:pt-0 sm:pb-0 md:h-[600px] xl:h-[535px] pr-4 bg-[#0D0D0D] rounded-lg flex flex-col text-center  gap-2 border border-[#1b0b2b] transition-transform hover:scale-105 duration-500">
                             <ol className="text-left p-7 flex flex-col gap-4 md:gap-2 xl:gap-4 mt-2">
                                <h1 className="text-2xl font-bold"> Enterprise</h1>
                                <li className="text-4xl font-bold">$Custom</li>
