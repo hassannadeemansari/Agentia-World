@@ -172,7 +172,7 @@ export default function Home(){
 
           {/*Powered by Advanced AI*/}
 
-          <div id="technology" className="2xl:w-[1600px]  bg-black flex flex-col items-center gap-32">          <div className="w-[77%] flex flex-col gap-12 mt-12">
+          <div id="technology" className="2xl:w-[1600px] h-auto pt-5 pb-5 bg-black flex flex-col items-center gap-32">          <div className="w-[77%] flex flex-col gap-12 mt-12">
                     <div className="flex flex-col items-center font-sans gap-4">
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-600 bg-clip-text text-transparent">Powered by Advanced AI</h1>
                         <p className="text-gray-500 text-[21px] font-sans ">Built on cutting-edge neural architectures</p>
