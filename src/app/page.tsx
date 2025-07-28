@@ -127,7 +127,7 @@ export default function Home(){
           {/**Hero */}
 
 {/*remove w for responsive*/}
-          <div className="2xl:w-[1600px] min-h-screen bg-gradient-to-b from-black to-[#120022] flex justify-center items-center">
+          <div className="2xl:w-[1600px] h-auto pt-5 pb-5 bg-gradient-to-b from-black to-[#120022] flex justify-center items-center">
 
 
               <div className=" w-[50%] h-[80%] flex flex-col items-center justify-center gap-9" >
