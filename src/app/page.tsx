@@ -124,49 +124,50 @@ export default function Home(){
 
 
 
-          {/**Hero */}
+  {/* Hero Section */}
+<div className="w-full h-auto min-h-screen pt-5 pb-5 bg-gradient-to-b from-black to-[#120022] flex justify-center items-center">
 
-{/*remove w for responsive*/}
-          <div className="2xl:w-[1600px] h-auto sm:min-h-screen pt-5 pb-5 bg-gradient-to-b from-black to-[#120022] flex justify-center items-center">
+  <div className="w-[90%] max-w-7xl flex flex-col items-center justify-center gap-9 text-center">
 
+    {/* Powered by */}
+    <div className="flex items-center gap-2 bg-[#0D0D0D] px-4 py-1 rounded-full">
+      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+      <p className="text-purple-500 text-sm">POWERED BY PANAVERSITY</p>
+    </div>
 
-              <div className=" w-[50%] h-[80%] flex flex-col items-center justify-center gap-9" >
+    {/* Heading */}
+    <div className="flex flex-col items-center gap-1">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 bg-clip-text">
+        Enterprise AI Agents
+      </h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
+        for the Future
+      </h1>
+    </div>
 
-                <div className="flex items-center h-8 gap-2 bg-[#0D0D0D] justify-center w-[260px] rounded-full">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <p className="text-purple-500 mt-1 text-sm">POWERED BY PANAVERSITY</p>
-                </div>
-                  
-                 <div className="flex flex-col items-center gap-1">
-                  <h1 className="sm:text-6xl text-4xl font- font-semibold text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 bg-clip-text">
-                    Enterprise AI Agents
-                  </h1>
-                  <h1 className="sm:text-6xl text-4xl font- font-semibold text-white">
-                  for the Future
-                  </h1>
-                 </div>
+    {/* Typing Box */}
+    <div className="w-[95%] sm:w-[80%] md:w-[70%] lg:w-[60%] bg-[#100E12] rounded-xl flex items-center gap-3 p-3 border border-purple-950">
+      <div className="w-12 h-12 bg-gradient-to-l to-purple-700 via-indigo-700 from-blue-700 flex justify-center items-center rounded-full">
+        <Bot className="w-8 h-8 text-white" />
+      </div>
+      <TypingBox />
+    </div>
 
-                  <div className="sm:w-[87%] w-[160%] sm:h-[100px] h-[120px] bg-[#100E12] rounded-xl flex items-center gap-1 border border-purple-950">
-                     <div className="w-12 h-12 bg-gradient-to-l to-purple-700 via-indigo-700 from-blue-700 flex justify-center items-center rounded-full ml-7"><Bot className="w-8 h-8 text-white" /></div>
-                       <TypingBox />
-                  </div>
+    {/* Buttons */}
+    <div className="flex flex-col md:flex-row gap-4 md:gap-10 mt-4">
+      <button className="px-6 py-3 bg-gradient-to-r to-purple-600 via-indigo-600 from-blue-600 rounded-lg text-white font-bold transition-shadow duration-300 hover:shadow-[0_0_25px_10px_rgba(80,0,110,0.7)] hover:scale-105">
+        Deploy Your AI Agent
+      </button>
 
+      <button className="px-6 py-3 border border-purple-800 hover:border-purple-500 rounded-lg text-white font-bold hover:shadow-[0_0_25px_10px_rgba(60,0,90,0.7)] transition-shadow duration-300">
+        Watch Demo
+      </button>
+    </div>
 
+  </div>
 
-                  <div className="flex justify-center gap-6 grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 md:gap-32 lg:gap-6 grid-rows-2 flex justify-center">
-                  <button className="w-[250px] h-14 bg-gradient-to-r to-purple-600 via-indigo-600 from-blue-600 rounded-lg text-white font-bold transition-shadow duration-300 hover:shadow-[0_0_25px_10px_rgba(80,0,110,0.7)] transition-transform duration-500 hover:scale-105">
-                    Deploy Your AI Agent
-                  </button>
-                  <div className="flex justify-center">
-                 <button className="w-[180px] h-14 border border-purple-800 hover:border-purple-500 rounded-l transition-border duration-300 text-white font-bold hover:shadow-[0_0_25px_10px_rgba(60,0,90,0.7)] transition-shadow duration-300">Watch Demo</button>
-                 </div>
-                  </div>
+</div>
 
-
-              </div>
-
-
-          </div>
 
           {/*middle*/}
 
