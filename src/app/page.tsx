@@ -60,7 +60,7 @@ export default function Home(){
 
  {/* navbar */}
 
- <nav className="fixed top-0 left-0 w-full bg-black z-50 shadow-lg shadow-[#1f113f] text-gray-400 flex justify-between items-center px-4 md:px-6 h-16 md:h-20">
+ <nav className="fixed top-0 left-0 w-full bg-black z-50 shadow-lg shadow-[#0c0026] text-gray-400 flex justify-between items-center px-4 md:px-6 h-16 md:h-20">
       <div className="flex items-center gap-2">
         <span className="text-2xl text-white font-bold">Agentia World</span>
       </div>
@@ -343,7 +343,7 @@ export default function Home(){
                                </button>
                          </div>
 
-                         <div className="sm:w-[100%] h-[580px] md:h-[600px] xl:h-[535px] pr-4 bg-[#0D0D0D] rounded-lg flex flex-col text-center  gap-2 border border-[#1b0b2b] transition-transform hover:scale-105 duration-500">
+                         <div className="sm:w-[100%] h-auto pt-3 pb-3 md:h-[600px] xl:h-[535px] pr-4 bg-[#0D0D0D] rounded-lg flex flex-col text-center  gap-2 border border-[#1b0b2b] transition-transform hover:scale-105 duration-500">
                             <ol className="text-left p-7 flex flex-col gap-4 md:gap-2 xl:gap-4 mt-2">
                                <h1 className="text-2xl font-bold"> Enterprise</h1>
                                <li className="text-4xl font-bold">$Custom</li>
