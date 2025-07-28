@@ -155,9 +155,12 @@ export default function Home(){
 
     {/* Buttons */}
     <div className="flex flex-col md:flex-row gap-4 md:gap-10 mt-4">
-      <button className="px-6 py-3 bg-gradient-to-r to-purple-600 via-indigo-600 from-blue-600 rounded-lg text-white font-bold transition-shadow duration-300 hover:shadow-[0_0_25px_10px_rgba(80,0,110,0.7)] hover:scale-105">
-        Deploy Your AI Agent
-      </button>
+<a
+  href="#pricing"
+  className="px-6 py-3 bg-gradient-to-r to-purple-600 via-indigo-600 from-blue-600 rounded-lg text-white font-bold transition-transform transition-shadow duration-300 hover:shadow-[0_0_25px_10px_rgba(80,0,110,0.7)] hover:scale-105"
+>
+  Deploy Your AI Agent
+</a>
 
       <button className="px-6 py-3 border border-purple-800 hover:border-purple-500 rounded-lg text-white font-bold hover:shadow-[0_0_25px_10px_rgba(60,0,90,0.7)] transition-shadow duration-300">
         Watch Demo
@@ -343,7 +346,7 @@ export default function Home(){
                                </button>
                          </div>
 
-                         <div className="sm:w-[100%] sm:h-[535px] h-auto pt-3 pb-5 sm:pt-0 sm:pb-0 md:h-[600px] xl:h-[535px] pr-4 bg-[#0D0D0D] rounded-lg flex flex-col text-center  gap-2 border border-[#1b0b2b] transition-transform hover:scale-105 duration-500">
+                         <div className="sm:w-[100%] sm:h-[535px] h-auto pt-3 pb-5 sm:pt-1 sm:pb-1 md:h-[600px] xl:h-[535px] pr-4 bg-[#0D0D0D] rounded-lg flex flex-col text-center  gap-2 border border-[#1b0b2b] transition-transform hover:scale-105 duration-500">
                             <ol className="text-left p-7 flex flex-col gap-4 md:gap-2 xl:gap-4 mt-2">
                                <h1 className="text-2xl font-bold"> Enterprise</h1>
                                <li className="text-4xl font-bold">$Custom</li>
@@ -354,7 +357,6 @@ export default function Home(){
                                <li className="flex gap-2"> <CircleCheck className="text-purple-700" /> Custom Development</li>
                                <li className="flex gap-2"> <CircleCheck className="text-purple-700" /> Full API Access</li>
                                <li className="flex gap-2"> <CircleCheck className="text-purple-700" /> Enterprise Security</li>
-                               <li className="flex gap-2"> <CircleCheck className="text-purple-700" /> Custom Training</li>
                             </ol>
                             <button className="w-[90%] ml-6 h-14 border border-[#351542] hover:border-[#9727c4] rounded-lg transition-border duration-300 text-white font-bold duration-300">Watch Demo</button>
 
