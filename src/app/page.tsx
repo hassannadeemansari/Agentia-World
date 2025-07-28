@@ -127,7 +127,7 @@ export default function Home(){
           {/**Hero */}
 
 {/*remove w for responsive*/}
-          <div className="2xl:w-[1600px] h-auto pt-5 pb-5 bg-gradient-to-b from-black to-[#120022] flex justify-center items-center">
+          <div className="2xl:w-[1600px] h-auto sm:min-h-screen pt-5 pb-5 bg-gradient-to-b from-black to-[#120022] flex justify-center items-center">
 
 
               <div className=" w-[50%] h-[80%] flex flex-col items-center justify-center gap-9" >
@@ -138,10 +138,10 @@ export default function Home(){
                 </div>
                   
                  <div className="flex flex-col items-center gap-1">
-                  <h1 className="sm:text-6xl text-5xl font- font-semibold text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 bg-clip-text">
+                  <h1 className="sm:text-6xl text-4xl font- font-semibold text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 bg-clip-text">
                     Enterprise AI Agents
                   </h1>
-                  <h1 className="sm:text-6xl text-5xl font- font-semibold text-white">
+                  <h1 className="sm:text-6xl text-4xl font- font-semibold text-white">
                   for the Future
                   </h1>
                  </div>
@@ -153,7 +153,7 @@ export default function Home(){
 
 
 
-                  <div className="flex justify-center gap-6 grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 md:gap-32 lg:gap-6 grid-rows-2 justify-center ">
+                  <div className="flex justify-center gap-6 grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 md:gap-32 lg:gap-6 grid-rows-2 flex justify-center">
                   <button className="w-[250px] h-14 bg-gradient-to-r to-purple-600 via-indigo-600 from-blue-600 rounded-lg text-white font-bold transition-shadow duration-300 hover:shadow-[0_0_25px_10px_rgba(80,0,110,0.7)] transition-transform duration-500 hover:scale-105">
                     Deploy Your AI Agent
                   </button>
